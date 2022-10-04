@@ -1,0 +1,14 @@
+<div class="jumbotron head text-center">
+
+  <h2> second Blog </h2>
+
+
+
+
+  <div *ngFor="let blog of blogs" id="mylist">
+    <div>{{blog.title}}</div>
+    <div>{{blog.category}}</div>
+    <div>{{blog.description | uppercase}}</div>
+  </div>
+
+</div>
