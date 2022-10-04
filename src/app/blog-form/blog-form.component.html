@@ -1,0 +1,24 @@
+<div>Form Value : {{blogform.value | json }}</div>
+<form #blogform = 'ngForm' (submit) ='insert(blogform.value)'>
+  <div>
+    <label >Title</label>
+    <input type="text" name="title"  placeholder="Enter title" ngModel>
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" name="description"  placeholder="Enter Description" ngModel>
+  </div>
+  <div>
+    <label>category</label>
+    <select name="category" ngModel>
+      <option value="default">select a category</option>
+      <option *ngFor="let category of categories" value="{{category}}">{{category}}</option>
+
+    </select>
+  </div>
+  <div>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </div>
+</form>
+
+
